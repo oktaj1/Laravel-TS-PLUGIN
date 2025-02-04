@@ -1,0 +1,29 @@
+{
+    "name": "ff/tsplugin",
+    "description": "Your package description",
+    "type": "library",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Oktaj Dauti",
+            "email": "oktajid@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "FF\\TsPlugin\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FF\\TsPlugin\\TsPluginServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    }
+}

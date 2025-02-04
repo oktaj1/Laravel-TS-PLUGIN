@@ -1,0 +1,69 @@
+TsPlugin
+A simple Laravel package to run TypeScript scripts via a button in the application.
+
+
+nstallation
+1. Require the package via Composer
+You can add the package to your Laravel project by running:
+
+bash
+
+composer require ff/tsplugin
+
+
+2. Publish the Assets (Optional)
+If the package includes any assets (like JavaScript or CSS), you can publish them to your Laravel application's public directory:
+
+bash
+
+php artisan vendor:publish --tag=public --force
+This will copy the assets to public/vendor/tsplugin.
+
+
+3. Service Provider
+The TsPluginServiceProvider will be automatically discovered by Laravel, so you don't need to manually add it to the config/app.php providers array.
+
+Usage
+Once installed, you can start using the package in your Laravel application.
+
+Add a Button to Trigger TypeScript Scripts
+
+In any Blade view, you can add a button to trigger the TypeScript script:
+
+html
+
+<button id="run-ts-script" class="btn btn-primary">Run TypeScript Script</button>
+
+Link the Button to TypeScript Script
+
+Add a JavaScript function to handle the button click event and execute the TypeScript script:
+
+js
+
+document.getElementById("run-ts-script").addEventListener("click", function() {
+    // Logic to trigger the TypeScript script (you might need to use a route or controller to run it)
+});
+
+
+You will need to define the backend logic for running the TypeScript script via a controller or command. This is where your TypeScript files will be executed.
+
+
+Configuration (Optional)
+If you need to customize the behavior or paths for the TypeScript files, you can update the relevant settings in the package or create a configuration file:
+
+bash
+
+php artisan vendor:publish --tag=tsplugin-config
+This will copy the configuration file to config/tsplugin.php.
+
+
+Testing
+To test the package in your own Laravel project:
+
+Follow the installation steps above.
+Add the button and script trigger as described in the Usage section.
+Ensure that the TypeScript scripts are working as expected.
+
+
+License
+This package is open-sourced software licensed under the MIT license.
